@@ -50,15 +50,37 @@
         border-bottom:none;
       }}
     </style>
-    <title>세일고 CTQ</title>
+    <title>세일고 익스플로러
+    </title>
   </head>
   <body>
   <input type="text" onchange="alert('changed')">
   <input type="text" onkeydown="alert('key down')">
-    <h1>세일고 CTQ</h1>
+    <h1 style="background-color:rgb(0, 255, 136)">세일고 익스플로러</h1>
+    
+    <input type="button" value="반" onclick="
+      document.querySelector('body').style.backgroundColor = 'white';
+      document.querySelector('body').style.color = 'black';">
+    
+    <input type="button" value="짝" onclick="
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('body').style.color = 'white';">
+
+    
+    <input id="night_day" type="button" value="짝" onclick="
+    var target = document.querySelector('body');
+    if(document.querySelector('#night_day').value === '짝') {
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      document.querySelector('#night_day').value = '반';
+    } else {
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    this.value = '짝';
+    }">
     <div id="grid">
       <div id="sidebar">
-        <h2>홈페이지 링크들</h2>
+        <h2><span style="font-weight:bold;">홈페이지 링크들</span></h2>
         <h3>
           <a href="http://seilhs.icehs.kr/main.do">세일고등학교 홈페이지</a>
         </h3>
