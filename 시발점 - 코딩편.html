@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- 구글 폰트 스크립트 -->
+  <script>
+    function nightDayHandler(self) {
+      var target = document.querySelector('body');
+      if (self.value === '반짝') {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        document.querySelector('#night_day').value = '짝반';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length) {
+          alist[i].style.color = 'aqua';
+          i = i + 1;
+        }
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        self.value = '반짝';
+      }
+    }
+  </script>
+  <title>코딩의 정석</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      font-family: 'Nanum Pen Script', cursive;
+      font-size: 20px;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .container {
+      background-image: url("./background.png");
+      background-size: 100% 100%;
+      background-position: center;
+      height: 100vh;
+      /* 페이지의 100%를 사용하라는 뜻 */
+    }
+
+    .mainTitle {
+      text-align: center;
+      font-family: 'Nanum Pen Script', cursive;
+      width: 30%;
+      margin: 0 auto;
+    }
+    .containery {
+	display: grid;
+	grid-template-columns: 150px 150px;
+    }
+  </style>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="mainTitle" style="background: linear-gradient(to right, #ffa7a3, #5673bd); padding: 
+          0.45em 10em; font-size: 30px; border-radius: 5px; color: #ffffff;">
+      <i class="fas fa-laptop-code"></i>
+      시발점 - 코딩편 <div style="font-size: 40px; color:lightblue">
+        <i class="fas fa-atom fa-spin"></i>
+      </div>
+    </div>
+    <input id="night_day" type="button" value="반짝" onclick="
+         nightDayHandler(this);
+        ">
+    <h2>
+      <p><span
+          style="border-radius: 15px 15px 15px 0; border: 3px solid #FFAD5B; padding: 0.5em 0.6em; color: #FF8000;">
+          시작해볼까요?</span></p>
+    </h2>
+    <p>코딩을 시작하기란 힘든 여정이 될 수 있습니다. 하지만 그만끔 쏠쏠한 재미가 있죠. 
+      <br>솔직히 파워포인트,엑셀,한글, 학교 정보시간에 배우는 스크래치가 끝이라면,
+      그 외 파이썬, C언어, 자바스크립트, HTML 등을 공부하기 무서울 것입니다. 저도 중학교때 그랬거든요. 
+      <br>하지만 쫄지 마세요. 생각보다 어렵진 않습니다!
+      <br><a href="시작해볼까요.html"><font color="blueviolet" class="saw">시작해봐요!</font></a></p></br>
+
+      <h2>
+        <p><span
+          style="border-radius: 15px 15px 15px 0; border: 3px solid #FFAD5B; padding: 0.5em 0.6em; color: #FF8000;">
+          다시해볼까요?</span></p>
+          </h2>
+    <p>
+      여러분들은 이제 기본적인 것들을 배웠습니다! 그럼 이제 잘 배웠는지 확인해볼까요? 
+      <br>물론 아는 것에서 끝나는 것이 아니라 직접 만들어보기도 해야 되는거 알고 있을거라 믿어요!
+      <br><a href="다시해볼까요.html"><font color="blueviolet" class="saw">다시해봐요!</font></a></p></br>
+    </p>
+    
+    <h2>  
+    <p><span
+    style="border-radius: 15px 15px 15px 0; border: 3px solid #FFAD5B; padding: 0.5em 0.6em; color: #FF8000;">
+    완성해볼까요?</span></p>
+    </h2>
+<p>
+HTML, CSS를 무사히 공부하셨군요! 
+<br>JavaScript에 대해 배워볼까요? 이번에는 설명이 끝난 직후 바로 퀴즈로 이어집니다!
+<br><a href="완성해볼까요.html"><font color="blueviolet" class="saw">완성해봐요!</font></a></p></br>
+</p>
+    </div>
+</body>
+
+</html>
+
+</html>

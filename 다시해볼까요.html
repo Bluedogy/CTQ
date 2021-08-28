@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+  <script>
+    function nightDayHandler(self) {
+      var target = document.querySelector('body');
+      if (self.value === '반짝') {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        document.querySelector('#night_day').value = '짝반';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length) {
+          alist[i].style.color = 'aqua';
+          i = i + 1;
+        }
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        self.value = '반짝';
+      }
+    }
+  </script>
+    <title>
+        다시해볼까요?
+    </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+        p {
+      font-family: 'Nanum Pen Script', cursive;
+      font-size: 20px;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .container {
+      background-image: url("./background.png");
+      background-size: 100% 100%;
+      background-position: center;
+      height: 100vh;
+      /* 페이지의 100%를 사용하라는 뜻 */
+    }
+
+    .mainTitle {
+      text-align: center;
+      font-family: 'Nanum Pen Script', cursive;
+      width: 30%;
+      margin: 0 auto;
+    }
+    .containery {
+	display: grid;
+	grid-template-columns: 150px 150px;
+    }
+
+    #grid {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+      }
+      #grid > #sidebar {
+        padding-left: 33px;
+      }
+      #grid > #article {
+        padding-left: 25px;
+      }
+      @media(max-width:700px){
+          #grid{
+              display: block;
+          }
+          h3 {
+        border-right:none;
+          }
+        h1 {
+        border-bottom:none;
+      }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mainTitle" style="background: linear-gradient(to right, #ffa7a3, #5673bd); padding: 
+              0.45em 10em; font-size: 30px; border-radius: 5px; color: #ffffff;">
+          <i class="fas fa-laptop-code"></i>
+          다시해볼까요? <div style="font-size: 40px; color:lightblue">
+            <i class="fas fa-atom fa-spin"></i>
+          </div>
+        </div>
+        <input id="night_day" type="button" value="반짝" onclick="
+             nightDayHandler(this);
+            ">
+            <div id="grid">
+                <div id="sidebar">
+                    <h1><span style="font-weight:bold;"><p>길라잡이</p></span></h1>
+                  <h2>
+                    <a href="시발점 - 코딩편.html" style="color:mediumslateblue"><p>처음으로</p></a>
+                  </h2>
+                    <h2><a href="완성해볼까요.html" style="color:mediumslateblue"><p>완성해볼까요</p></a></h2>
+                    <h2><a href="다시해볼까요.html" style="color:mediumslateblue"><p>다시해볼까요</p></a></h2>
+                  </h3>
+                </div>
+        <div id="article">
+        <h1><p><span
+            style="border-radius: 15px 15px 15px 0; border: 3px solid #FFAD5B; padding: 0.5em 0.6em; color: #FF8000;">
+            확인해보기</span></p>
+        </h1>
+       <p> 문제 1. 프로그램에다 그냥 한국어를 넣으려고 하면 ??? ??? ???? 이런식으로 오류가 뜬다. 이걸 해결하기 위한 방법은? 
+        <br>
+        <br>문제 2. 직접 웹을 만들어보고, 그 웹에 제목을 달아보세요.
+        <br>
+        <br>문제 3. 문제 2에서 만든 웹에다 직접 HTML에다 링크를 달아보고, 잘 실행되는지 확인하세요. 
+        <br>또한, 타 사이트 말고 자기가 만든 웹으로도 이동할 수 있도록 만들어보세요.
+        <br>
+        <br>문제 4. CSS에서 margin은 어떤걸 의미하는지 설명하시오.  
+        <br>
+        <br>문제 5. 이 홈페이지에는 "반짝"이란 문구와 함께 배경화면이 어두워졌다 밝아졌다를 바꿀 수 있는 버튼이 있습니다. 문제 2에서 만든 웹에
+        <br>동일하게 만들어보세요.(단, 이름은 바꾼다.)
+        <br>
+        <br>문제 6. 문제 2에서 만든 웹에서 grid를 이용하여 한 화면을 2개로 구분해보세요.
+        <br>
+        <br>문제의 정답은 직접 찾아보세요. </p>
+      </div>
+     </div>
+    </div>
+</body>
+</html>

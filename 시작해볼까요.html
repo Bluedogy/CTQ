@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+  <script>
+    function nightDayHandler(self) {
+      var target = document.querySelector('body');
+      if (self.value === '반짝') {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        document.querySelector('#night_day').value = '짝반';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length) {
+          alist[i].style.color = 'aqua';
+          i = i + 1;
+        }
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        self.value = '반짝';
+      }
+    }
+  </script>
+    <title>
+        시작해볼까요?
+    </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+        p {
+      font-family: 'Nanum Pen Script', cursive;
+      font-size: 20px;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .container {
+      background-image: url("./background.png");
+      background-size: 100% 100%;
+      background-position: center;
+      height: 100vh;
+      /* 페이지의 100%를 사용하라는 뜻 */
+    }
+
+    .mainTitle {
+      text-align: center;
+      font-family: 'Nanum Pen Script', cursive;
+      width: 30%;
+      margin: 0 auto;
+    }
+    .containery {
+	display: grid;
+	grid-template-columns: 150px 150px;
+    }
+
+    #grid {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+      }
+      #grid > #sidebar {
+        padding-left: 33px;
+      }
+      #grid > #article {
+        padding-left: 25px;
+      }
+      @media(max-width:700px){
+          #grid{
+              display: block;
+          }
+          h3 {
+        border-right:none;
+          }
+        h1 {
+        border-bottom:none;
+      }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mainTitle" style="background: linear-gradient(to right, #ffa7a3, #5673bd); padding: 
+              0.45em 10em; font-size: 30px; border-radius: 5px; color: #ffffff;">
+          <i class="fas fa-laptop-code"></i>
+          시작해볼까요? <div style="font-size: 40px; color:lightblue">
+            <i class="fas fa-atom fa-spin"></i>
+          </div>
+        </div>
+        <input id="night_day" type="button" value="반짝" onclick="
+             nightDayHandler(this);
+            ">
+            <div id="grid">
+                <div id="sidebar">
+                    <h1><span style="font-weight:bold;"><p>길라잡이</p></span></h1>
+                  <h2>
+                    <a href="시발점 - 코딩편.html" style="color:mediumslateblue"><p>처음으로</p></a>
+                  </h2>
+                    <h2><a href="완성해볼까요.html" style="color:mediumslateblue"><p>완성해볼까요</p></a></h2>
+                    <h2><a href="다시해볼까요.html" style="color:mediumslateblue"><p>다시해볼까요</p></a></h2>
+                  </h3>
+                </div>
+        <div id="article">
+        <h1><p><span
+            style="border-radius: 15px 15px 15px 0; border: 3px solid #FFAD5B; padding: 0.5em 0.6em; color: #FF8000;">
+            HTML 시작하기</span></p>
+        </h1>
+       <p> HTML이란, HTML (Hypertext Markup Language,하이퍼텍스트 마크업 언어)는 프로그래밍 언어는 아니고, 
+        <br>우리가 보는 웹페이지가 어떻게 구조화되어 있는지 브라우저로 하여금 알 수 있도록 하는 마크업 언어입니다.
+        <br>(마크업 언어는 태그 등을 이용하여 문서나 데이터의 구조를 분명히 밝히어 적는 언어의 한 가지이다.) 
+        <br>이는 개발자로 하여금 복잡하게도 간단하게도 프로그래밍 할 수 있습니다. HTML은 elements로 구성되어 있으며, 
+        <br>이들은 적절한 방법으로 나타내고 실행하기 위해 각 컨텐츠의 여러 부분들을 감싸고 마크업 합니다.
+        <br>
+        <br>
+        <br>tags 는 웹 상의 다른 페이지로 이동하게 하는 하이퍼링크 내용들을 생성하거나, 단어를 강조하는 등의 역할을 합니다.
+        <br>다시말해, tag를 이용하여 <strong>이런거</strong>나 <u>이런거</u>가 가능하다는 것입니다. 또한 태그가 없다면 아마 제가 지금 쓰고 있는 글이 들여써지지가 않아 지금처럼 한 줄이 길게 되어 보기 예민하고 화나고 짜증날 수 있습니다. 그래서 태그가 필요한 것입니다!
+        <br>
+        <br> 혹시, tag를 하나하나 외워야만이 최고의 개발자가 되는 길이라고 생각하셨나요?
+        <br> 절대 아닙니다! tag는 외울수 없을 정도로 많기 때문입니다. 따라서 가장 중요한거는 <font color="red"><strong><u>구글링</u></strong></font>입니다!
+        <br>구글링을 통해서는 당신이 원하는 정보를 막 얻을수 있습니다.(다만, 구글링해서 얻은 그것을 가공및 숙련해서 써먹는거는 당신의 몫입니다!)
+        <br> 남은 건 <a href="https://opentutorials.org/course/1" style="color: rgb(68, 0, 255)">생활코딩</a> 이 사이트에서 배우고 주로 <font color="red"><strong><u>구글링</u></strong></font>을 통해 배우길 추천드립니다
+        </p>
+      </div>
+     </div>
+    </div>
+</body>
+</html>

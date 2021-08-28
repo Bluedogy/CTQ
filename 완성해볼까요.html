@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+  <script>
+    function nightDayHandler(self) {
+      var target = document.querySelector('body');
+      if (self.value === '반짝') {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        document.querySelector('#night_day').value = '짝반';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length) {
+          alist[i].style.color = 'aqua';
+          i = i + 1;
+        }
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        self.value = '반짝';
+      }
+    }
+  </script>
+    <title>
+        시작해볼까요?
+    </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+        p {
+      font-family: 'Nanum Pen Script', cursive;
+      font-size: 20px;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .container {
+      background-image: url("./background.png");
+      background-size: 100% 100%;
+      background-position: center;
+      height: 100vh;
+      /* 페이지의 100%를 사용하라는 뜻 */
+    }
+
+    .mainTitle {
+      text-align: center;
+      font-family: 'Nanum Pen Script', cursive;
+      width: 30%;
+      margin: 0 auto;
+    }
+    .containery {
+	display: grid;
+	grid-template-columns: 150px 150px;
+    }
+
+    #grid {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+      }
+      #grid > #sidebar {
+        padding-left: 33px;
+      }
+      #grid > #article {
+        padding-left: 25px;
+      }
+      @media(max-width:700px){
+          #grid{
+              display: block;
+          }
+          h3 {
+        border-right:none;
+          }
+        h1 {
+        border-bottom:none;
+      }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mainTitle" style="background: linear-gradient(to right, #ffa7a3, #5673bd); padding: 
+              0.45em 10em; font-size: 30px; border-radius: 5px; color: #ffffff;">
+          <i class="fas fa-laptop-code"></i>
+          완성해볼까요? <div style="font-size: 40px; color:lightblue">
+            <i class="fas fa-atom fa-spin"></i>
+          </div>
+        </div>
+        <input id="night_day" type="button" value="반짝" onclick="
+             nightDayHandler(this);
+            ">
+            <div id="grid">
+                <div id="sidebar">
+                    <h1><span style="font-weight:bold;"><p>길라잡이</p></span></h1>
+                  <h2>
+                    <a href="시발점 - 코딩편.html" style="color:mediumslateblue"><p>처음으로</p></a>
+                  </h2>
+                    <h2><a href="완성해볼까요.html" style="color:mediumslateblue"><p>완성해볼까요</p></a></h2>
+                    <h2><a href="다시해볼까요.html" style="color:mediumslateblue"><p>다시해볼까요</p></a></h2>
+                  </h3>
+                </div>
+        <div id="article">
+        <h1><p><span
+            style="border-radius: 15px 15px 15px 0; border: 3px solid #FFAD5B; padding: 0.5em 0.6em; color: #FF8000;">
+            더 알아보기</span></p>
+        </h1>
+        <p> 우선 전에 제가 <strong>구글링</strong>과<strong>생활코딩</strong> 홈페이지를 보여줌으로써 배우는 방법을 알려주었는데요,
+            <br>이번에는 HTML말고도 어떤 것이 있는지, 그리고 꿀팁들 몇몇을 설명드릴려고 합니다!
+            <br>우선 HTML말고 다른 프로그래밍 언어들을 소개하자면,
+            <br>CSS, JavaScript가 있고, 모두 배워보면 좋을 것 같습니다. 이외에도 파이썬, Node.js, C 등도 있습니디.
+            <br> 
+            <br>또한 오류가 생겼을때, 디버그를 하는 것도 중요한데요,
+            <br>디버그를 하는 방법에는 (VScode기준) 아래에 X자랑 !표시로 있는 부분을 확인하면 오류를 빠르게 체크할 수 있습니다.
+            <br>또한 Live share를 통해 다른 친구가 코딩하는 것을 도와줄 수 있습니다.
+            <br>
+            <br>다시해볼까요 부분에서는 몇가지의 퀴즈들을 통해 제대로 이해했는지 조금이나마 확인하는 것을 도와주고자 합니다.
+            <br>수고하세요 </p>
+          </div>
+         </div>
+        </div>
+    </body>
+    </html>
